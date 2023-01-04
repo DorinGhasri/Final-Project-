@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>identification</title>
+        <link rel="stylesheet" href="..//static/style.css">
+    </head>
+    <body>
+    <div id="IDPageContainer">
+        
+        <header id="myHeader">
+            <p></p>
+        </header>
+            
+        <div id ="IDPageCenter">
+                <h1 class=title-Identification > מסך הזדהות </h1> 
+                <h2 class=title-Identification >אנא מלאו את הפרטים הבאים:</h1> 
+            <form id=form action="" method="get">
+                <label class = label for="name">שם מלא: &nbsp; &nbsp;</label> 
+                <input type="text" id="name" required> <br> <br>
+                <label class = label for="email"> כתובת מייל:&nbsp;</label> 
+                <input type="email" id="email" required pattern="[^ @]*@[^ @]*"> <br> <br>
+                <label class = label for="year"> שנה בתואר:</label>
+                <input list= yearList id="year" required> 
+                    <datalist id= "yearList">
+                        <option value = "ראשונה">
+                        <option value = "שנייה">
+                        <option value = "שלישית">
+                        <option value = "רביעית">
+                    </datalist> <br> <br>
+                <a href="..//template/ChooseCourse.html"><input id = IdentificationSubmitButton type="submit" value="הגש">
+    
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

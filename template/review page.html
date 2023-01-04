@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//static/style.css">
+    <script defer src="../static/bengurion.javascript.js"></script>
+    <script src="https://kit.fontawesome.com/61eac9328a.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    
+
+    <div id="ReviewContainter">
+
+        <div id ="ReviewCenter">
+            <h2 class=informationSection >  >>מידע מטעם האתר<< </h1>             
+            <h1 class=title-review> שתף את ביקורתך:</h1> 
+
+            <p class = ratingLabels> הערכה כללית:
+                <i class="my-star star-1" data-star1="1"></i>
+                <i class="my-star star-2" data-star1="2"></i>
+                <i class="my-star star-3" data-star1="3"></i>
+                <i class="my-star star-4" data-star1="4"></i>
+                <i class="my-star star-5" data-star1="5"></i>
+            </p>
+
+            
+            <input type="hidden" readonly id="output1">
+          <!--rating is saved as number-->
+    
+                
+                
+                <p class = ratingLabels> רמת קושי:
+                <i class="my-star2 star-1" data-star2="1"></i>
+                <i class="my-star2 star-2" data-star2="2"></i>
+                <i class="my-star2 star-3" data-star2="3"></i>
+                <i class="my-star2 star-4" data-star2="4"></i>
+                <i class="my-star2 star-5" data-star2="5"></i>
+                </p>
+
+                <input type="hidden" readonly id="output2">
+                <!--rating is saved as number-->
+
+                <p class = ratingLabels> רמת ארגון החומר:</p>
+                <p class = ratingLabels> מקצועיות המרצה:</p>
+                <p class = ratingLabels> באיזו מידה הקורס תרם לי:</p>
+                <p class = ratingLabels> באיזו מידה הייתי ממליץ לחבר לקחת את הקורס:</p>
+    
+                
+         <form action="" method="get">
+            <h2 id=PresonalReview>שתף את חוויתך האישית:</h2> 
+            <label class = label for="review"></label> 
+            <textarea id="review" name="review" placeholder="פרט" minlength="10" maxlength="5000"></textarea>  
+            <a href="..//template/GoodbyePage.html"></a><input id = submitButtonReview type="submit" value="הגש"> 
+         </form>
+
+        <div >
+    
+    </div>
+
+
+</body>
+</html>
