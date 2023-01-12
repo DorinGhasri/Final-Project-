@@ -1,0 +1,24 @@
+
+doctype html
+html(dir="rtl", lang="en")
+  head
+    //- meta(charset="UTF-8")
+    //- meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    //- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Home Page
+    link(rel="stylesheet" , href="..//static/style.css")
+  body
+    #HomePagecontainer
+      header#myHeader
+        p
+      #HomePageCenter
+        h1#title המלצות וביקורות על קורסים 
+          br
+          | לסטודנטים, מסטודנטים
+        p#text מערכת ביקורות נסיונית כלל אוניברסיטאית, 
+          br
+          | פיילוט על קורסי הבחירה של מחלקת הנדסת תעשייה וניהול
+        img#sweetCamel(src="..//static/camel pic.png")
+      #toIdentificationPage
+        a(href='/IdentificationPage')
+          button.clickToVote כנסו והשפיעו!

@@ -1,0 +1,32 @@
+doctype html
+html(dir="rtl", lang="en")
+  head
+    title Identification Page
+    link(rel="stylesheet" ,href="..//static/style.css")
+  body
+    #IDPageContainer
+      header#myHeader
+        p
+      #IDPageCenter
+        h1.title-Identification  מסך הזדהות 
+        h2.title-Identification אנא מלאו את הפרטים הבאים:
+          form#form(action="/ChooseCoursePage" method="get")
+            label.label(for="name") שם מלא:       
+            input#name(type="text", required)
+            br
+            br
+            label.label(for="email")  כתובת מייל:
+            input#email(type="email", required, pattern="[^ @]*@[^ @]*")
+            br
+            br
+            label.label(for="year")  שנה בתואר:
+            input#year(list="yearList", required)
+            datalist#yearList
+              option(value="ראשונה")
+                option(value="שנייה")
+                  option(value="שלישית")
+                    option(value="רביעית")
+                      br
+                      br
+            
+            input#IdentificationSubmitButton(type="submit", value="הגש")
