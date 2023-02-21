@@ -1,4 +1,4 @@
-var SQL = require('./DB');
+var SQL = require('./db');
 const path = require('path');
 const csv=require('csvtojson');
 

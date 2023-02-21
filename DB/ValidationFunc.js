@@ -1,5 +1,5 @@
 
-const sql = require("/Users/דורין/Desktop/תואר/שנה ד/פרויקט גמר/אתר/Final-Project-/DB/db.js");
+const sql = require("./db.js");
 var path = require("path");
 const e = require("express");
 var url = require('url');
