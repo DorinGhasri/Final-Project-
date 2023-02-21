@@ -387,7 +387,7 @@ h1.title-review{
 
 
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 700px), screen and (max-device-width: 767px) and (orientation: portrait), screen and (max-device-width: 415px) and (orientation: landscape){
     /*Phone HomePage page*/
     #HomePagecontainer {
 		display: grid;
