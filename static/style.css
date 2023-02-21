@@ -540,7 +540,7 @@ h1.title-review{
 
 /*Phone ID page*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 
 	#IDPageContainer{
 		display: grid;
@@ -552,10 +552,9 @@ h1.title-review{
     #form{
         width: 50%; height: 380px;
         border: 5px solid rgb(0, 0, 0);
-        border-radius:25%;
+        border-radius:15%;
         padding-top: 3%;
-        padding-bottom: 5%;
-		margin-bottom: 20%;
+        padding-bottom: 20%;
         text-align: center;
         margin-right: 30%;
         grid-area: 'IDPageCenter';
