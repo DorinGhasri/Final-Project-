@@ -387,7 +387,8 @@ h1.title-review{
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+    /*Phone HomePage page*/
     #HomePagecontainer {
 		display: grid;
 		grid-template-areas:
@@ -434,6 +435,7 @@ h1.title-review{
         grid-area:'HomePageCenter';
     }
 
+     /*Phone goodbye page*/
     #GoodbyeContainer{
         display: grid;
 		grid-template-areas:
@@ -459,13 +461,8 @@ h1.title-review{
         grid-area: 'GoodbyeCenter';
     }
 
-
-
-}
-
-
-
-@media only screen and (max-width: 600px) {
+    
+ /*Phone chooseCourse page*/
 	#ChooseCourseContainer {
 		display: grid;
 		grid-template-areas:
@@ -558,15 +555,12 @@ h1.title-review{
         text-align: center;
         margin-right: 30%;
         grid-area: 'IDPageCenter';
-
        
     }
-}
 
-/*Phone Review page*/
-@media only screen and (max-width: 600px) {
+    /*Phone Review page*/
 
-	#ReviewContainter{
+    #ReviewContainter{
 		display: grid;
 		grid-template-areas:
 		'ReviewCenter'
@@ -606,4 +600,10 @@ h1.title-review{
         margin-right: 2%;
     }
 
+
+
+
 }
+
+
+
