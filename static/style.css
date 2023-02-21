@@ -221,11 +221,9 @@ h2.title-Identification{
 
 
 #form{
-        width: 30%; height: 200px;
-        border: 5px solid rgb(0, 0, 0);
-        border-radius:25%;
+        width: 30%; height: 10%;
         padding-top: 3%;
-        padding-bottom:8%;
+        padding-bottom:3%;
 		margin-right: 35%;
         grid-area: 'IDPageCenter';
         font-size:80%;
@@ -238,7 +236,6 @@ h2.title-Identification{
     color: #FFF2E0;
     text-align:center;
     font-weight: bolder;
-    font-size: 100%;
     cursor:pointer;
     margin-right: 100%;
     font-style: normal;
@@ -422,7 +419,7 @@ h1.title-review{
     }
 
     .clickToVote{
-        font-size: 120%;
+        font-size: 150%;
         cursor:pointer;
         margin-left: 20%;
         margin-right: 70%;
@@ -542,10 +539,9 @@ h1.title-review{
 
     #form{
         width: 50%; height: 380px;
-        border: 5px solid rgb(0, 0, 0);
-        border-radius:15%;
         padding-top: 3%;
-        padding-bottom: 20%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
         text-align: center;
         margin-right: 30%;
         grid-area: 'IDPageCenter';
