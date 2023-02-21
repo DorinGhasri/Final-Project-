@@ -90,11 +90,22 @@ function checkDeviceValidity(mobile, code) {
 //Check device type function
 function checkMobile(req) {
     const agent = userAgent.parse(req.headers['user-agent']);
-    if (agent.isMobile) {
+    const agent2 = JSON.stringify(agent)
+    console.log('nowwww')
+    console.log(agent2.includes("Mobile"));
+    if (agent2.includes("Mobile")) {
         return true;
     }
     return false;
   }
+
+
+  
+  
+
+
+
+
 
 
 
