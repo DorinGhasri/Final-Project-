@@ -15,6 +15,7 @@ html(dir="rtl", lang="en")
       #ReviewCenter
           h1.title-review  שתף את ביקורתך:
           .Message #{AnonMessage}
+          br
           form(action='/newReview' method="POST")
             p.ratingLabels
               | הערכה כללית:
@@ -70,7 +71,7 @@ html(dir="rtl", lang="en")
               i.my-star6.star6-5(data-star6="5")
             input#output6(type="hidden",name ='recommended', readonly)
             // rating is saved as number
-
+          
             h2#PresonalReview שתף את חוויתך האישית:
             label.label(for="review")
             textarea#review(name="review", placeholder="פרט", maxlength="5000")
@@ -81,5 +82,5 @@ html(dir="rtl", lang="en")
             br
             br
             input#submitButtonReview(type="submit", value="הגש")
-          .errorMessage #{Code}
+          
           div
