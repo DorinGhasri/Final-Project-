@@ -22,7 +22,11 @@ app.use(cookieParser());
 
 
 app.get("/", (req, res) => {
-  res.redirect("HomePage");
+  res.redirect("ConsentPage");
+});
+
+app.get("/ConsentPage", (req, res) => {
+  res.render("ConsentPage");
 });
 
 app.get("/HomePage", (req, res) => {
@@ -36,6 +40,8 @@ app.get("/IdentificationPage", (req, res) => {
 app.get("/ChooseCoursePage", (req, res) => {
   res.render("ChooseCoursePage");
 });
+
+;
 
 app.get("/ReviewPage", (req, res) => {
   if(req.cookies.Anon == 'true' && req.cookies){
@@ -59,7 +65,8 @@ app.listen(process.env.PORT || 3000, function(){
 
 //get and post
 app.post("/newReview", CRUD_operations.createNewReview);
-app.get("/userdetails",JSValid.userdetails);
+app.get("/CodeValidation",JSValid.CodeValidation);
+
 
 
 // get the cookie incoming request
@@ -75,7 +82,7 @@ app.get('/deletecookie', (req, res) => {
 });
 
 //create DB tables
-app.get('/CreateReviewTable',CreateDB.CreateReviewsTable);
+app.get('/CreateReviewsTable',CreateDB.CreateReviewsTable);
 app.get('/CreateTeamsTable',CreateDB.CreateTeamsTable);
 
 //insert into DB tables

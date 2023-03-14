@@ -1,4 +1,30 @@
 
+// Hide button until box is checked in consent page
+const checkbox = document.getElementById('myCheckbox');
+const button = document.getElementById('myButton');
+if (checkbox !== null){
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+    });
+}
+
+
+const input = document.getElementById('CourseNameInput');
+const CourseButton = document.getElementById('submitCourseName');
+if(input !== null){
+input.addEventListener('input', function() {
+    if (this.value !== '') {
+        CourseButton.style.display = 'block';
+    } else {
+        CourseButton.style.display = 'none';
+    }
+  });
+}
+
 
 
 (function() {

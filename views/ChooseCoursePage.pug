@@ -4,6 +4,8 @@ html(lang="en", dir="rtl")
 
     title Choose Course Page
     link(rel="stylesheet", href="style.css")
+    script(defer ,src="StarsFunc.js")
+    
   body
     #ChooseCourseContainer
         header#myHeader
@@ -41,3 +43,18 @@ html(lang="en", dir="rtl")
                 .flex-child
                     a(href="/ReviewPage")
                         input.course(type="submit", value='ניתו"צ')
+        .differentCourse 
+            p#CourseText לבחירת קורס שאינו מופיע מעלה:
+            br
+            label.CourseName(for="CourseName") מלא את שם הקורס: 
+            input#CourseNameInput.CourseName(type="text")
+
+            #toReviewPage
+                a(href='/ReviewPage')
+                    button#submitCourseName(style='display: none;') בחר  
+
+      
+
+        br
+        br
+        

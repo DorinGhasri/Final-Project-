@@ -1,0 +1,41 @@
+doctype html
+html(dir="rtl", lang="en")
+  head
+   
+    title Consent Page
+    link(rel="stylesheet" , href="style.css")
+    script(defer ,src="StarsFunc.js") 
+
+  body
+    #ConsentPagecontainer
+      header#myHeader
+        p
+      #ConsentPageCenter
+        p#ConsentPagetext 
+          | שלום,
+          br
+          | אנו קבוצת סטודנטים שמקימה אתר ביקורות קורסים באוניברסיטת בן גוריון לסטודנטים מאת סטודנטים. 
+          |המערכת נועדה להיות מערכת סטודנטיאלית לדירוגי קורסים.
+          br
+          | לפניכם גרסאת בטא (מערכת פיילוט) לסטודנטים במחלקה להנדסת תעשייה וניהול בקורס X.
+          br
+          | אנחנו רוצים להריץ את גרסאת הבטא בעזרתכם על ידי איסוף ביקורות על קורסי המחלקה. נודה לכם על השתתפותכם.
+          br
+          br
+          | כל סטודנט מקורס X שישלים את השתתפותו בהרצה של הפיילוט יקבל נקודת בונוס לציון הסופי של הקורס.
+          br
+          | חשוב להדגיש כי בכל שלב ניתן לפרוש או לסגת מהשתתפות בהרצה. אף שלב בהשתתפות אינו חובה.
+          br
+          | ואולם סטודנט שלא ישלים את השתתפותו לא יזכה בנקודת הבונוס.
+
+        
+
+        input#myCheckbox(type="checkbox")
+        label.label(for="myCheckbox") הנני מאשר שקראתי את האמור לעיל ונתתי את הסכמתי להשתתפות בהרצה נסיונית של המערכת.
+        
+        p#ConsentClosePage במידה ואינך מאשר/ת, אנא סגור את הדפדפן. 
+     
+      #toHomePage
+        a(href='/HomePage')
+          button#myButton(style='display: none;') המשך  
+

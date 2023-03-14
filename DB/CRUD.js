@@ -30,21 +30,23 @@ const createNewReview = function(req,res){
             res.status(400).send({message: "error in creating review: " + err});
             return;
         }
-        if (results.length != 0){ //found the review in the db- it already exists
-            res.render('ReviewPage', {Code: "כבר נעשה שימוש בקוד משתמש זה"});
-        }
-        else{
-            sql.query("INSERT INTO Reviews SET ?", newReview, (err, mysqlres) => {
-                if (err) {
-                    console.log("error: ", err);
-                    res.status(400).send({message: "error in creating review: " + err});
-                    return;
-                }
-                console.log("new review added successfully");
-                res.render("GoodbyePage");
+        sql.query("INSERT INTO Reviews SET ?", newReview, (err, mysqlres) => {
+            if (err) {
+                console.log("error: ", err);
+                res.status(400).send({message: "error in creating review: " + err});
                 return;
-            });
-        }
+            }
+            console.log("new review added successfully");
+            console.log("עכשיו בדיקה");
+            console.log(req.body.button1);
+            if (req.body.button1 === "OneMoreReviewBut") {
+                res.render("ReviewPage");
+            }else {
+                res.render("GoodbyePage");
+            }
+            return;
+        });
+        
     });
 };
 

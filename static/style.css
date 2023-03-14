@@ -38,7 +38,6 @@
     font-size: 150%;
     grid-area:'HomePageCenter';
     
-   
 }
 
 #text{
@@ -51,16 +50,31 @@
     margin-left: 43%;
 }
 
-.clickToVote{
+
+.codeLabel{
+    color: rgb(0, 0, 0);
+    padding:0.3%;
+
+}
+
+#codeForm{
+    margin-top:2%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:150%; 
+    font-weight: bold;
+}
+
+.CodeSubmitButton{
     background-color: black;
     color: #FFF2E0;
     text-align:center;
     font-weight: bolder;
     cursor:pointer;
-    margin-left: 30%;
-    margin-right:60%;
+    margin-left: 20%;
+    margin-right:70%;
     font-style: normal;
-    padding: 0.2%;
+    padding: 1.5%;
     padding-top: 1%;
     padding-bottom: 1%;
     text-decoration: none;
@@ -70,11 +84,44 @@
     grid-area: 'HomePageCenter';
 }
 
-.clickToVote:hover{
+.CodeSubmitButton:hover{
     background-color:#FF914D;
     border-color: #FF914D;
 }
 
+
+/*Consent Page*/
+
+#ConsentPageCenter{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: x-large;
+    grid-area: 'ConsentPageCenter';
+    margin-right: 2%;
+}
+
+#myButton{
+    background-color: black;
+    color: #FFF2E0;
+    text-align:center;
+    font-weight: bolder;
+    cursor:pointer;
+    margin-left: 20%;
+    margin-right:70%;
+    font-style: normal;
+    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    background-color: black;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: large;
+    grid-area: 'HomePageCenter';
+}
+
+#myButton:hover{
+    background-color:#FF914D;
+    border-color: #FF914D;
+}
 
 
 /*Choose Course*/
@@ -145,7 +192,44 @@
     border-color: #FF914D;
 }
 
+#CourseText{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bold;
+    color:black;
+    font-size: 150%;
+}
 
+.CourseName{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bold;
+    color:black;
+    font-size: 100%;
+}
+
+
+#submitCourseName{
+    background-color: black;
+    color: #FFF2E0;
+    text-align:center;
+    font-weight: bolder;
+    cursor:pointer;
+    margin-left: 20%;
+    margin-right:70%;
+    font-style: normal;
+    padding: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+    background-color: black;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: large;
+    grid-area: 'HomePageCenter';
+}
+
+#submitCourseName:hover{
+    background-color:#FF914D;
+    border-color: #FF914D;
+}
 
 #finalSentence {
 	grid-area: finalSentence;
@@ -320,8 +404,8 @@ h1.title-review{
     font-weight: bolder;
     font-size: 180%;
     cursor:pointer;
-    margin-right: 10%;
-    margin-left: 26%;
+    margin-right: 5%;
+    margin-left: 32%;
     font-style: normal;
     padding-right: 1%;
     padding-left: 1%;
@@ -335,6 +419,32 @@ h1.title-review{
 }
 
 #submitButtonReview:hover{
+	background-color:#FF914D;
+    border-color: #FF914D;
+}
+
+
+#OneMoreReview{
+    background-color: black;
+    color: #FFF2E0;
+    text-align:center;
+    font-weight: bolder;
+    font-size: 180%;
+    cursor:pointer;
+    margin-right: 50%;
+    margin-left: 5%;
+    font-style: normal;
+    padding-right: 1%;
+    padding-left: 1%;
+    text-decoration: none;
+    background-color: black;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float:left;
+    margin-top: -3.5%;
+    grid-area: 'ReviewCenter';
+}
+
+#OneMoreReview:hover{
 	background-color:#FF914D;
     border-color: #FF914D;
 }
@@ -473,9 +583,20 @@ h1.title-review{
 			'mainTitle'
             'title'
 			'flex-container1'
-			'flex-container2';
+			'flex-container2'
+            'differentCourse';
 	}
 
+    .differentCourse{
+        grid-area: 'differentCourse';
+    }
+
+
+    #submitCourseName{
+        grid-area: 'differentCourse';
+        margin-top: 3%;
+        margin-right: 85%;
+    }
 
 	.flex-container1,
 	.flex-container2 {
@@ -574,8 +695,30 @@ h1.title-review{
         font-weight: bolder;
         font-size: 150%;
         cursor:pointer;
-        margin-right: 10%;
-        margin-left: 19%;
+        margin-right: 5%;
+        margin-left: 63%;
+        font-style: normal;
+        padding: 1%;
+        padding-right: 1.5%;
+        padding-left: 1.5%;
+        text-decoration: none;
+        background-color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        float:left;
+        margin-top: -10.5%;
+        grid-area: 'ReviewCenter';
+	
+    }
+
+    #OneMoreReview{
+        background-color: black;
+        color: #FFF2E0;
+        text-align:center;
+        font-weight: bolder;
+        font-size: 150%;
+        cursor:pointer;
+        margin-right: 20%;
+        margin-left: 5%;
         font-style: normal;
         padding: 1%;
         padding-right: 1.5%;

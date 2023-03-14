@@ -10,7 +10,7 @@ html(dir="rtl", lang="en")
       #IDPageCenter
         h1.title-Identification  מסך הזדהות 
         h2.title-Identification אנא מלאו את הפרטים הבאים:
-          form#form(action="/userdetails" method="GET")
+          form#form(action="/ChooseCoursePage" method="GET")
             label.label(for="name") שם מלא:       
             input#name(type="text", required)
             br
@@ -28,13 +28,6 @@ html(dir="rtl", lang="en")
                     option(value="רביעית")
             br
             br
-
-            label.label(for="code") קוד כניסה:       
-            input#code(type="text",name = 'code', required)
-            br
-            br
-            .errorMessage #{wrongDevice}
-            .errorMessage #{CodeUsed}
 
             input#IdentificationSubmitButton(type="submit", value="הגש")
           

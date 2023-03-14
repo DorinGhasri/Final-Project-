@@ -18,6 +18,26 @@ html(dir="rtl", lang="en")
         p#text גרסת בטא
           
         img#sweetCamel(src="camel pic.png")
-      #toIdentificationPage
-        a(href='/IdentificationPage')
-          button.clickToVote כנסו והשפיעו!
+
+      form#codeForm(action="/CodeValidation" method="GET")
+            label.codeLabel(for="code") קוד כניסה:       
+            input#code(type="text",name = 'code', required)
+            br
+            br
+            .errorMessage #{wrongDevice}
+            .errorMessage #{CodeUsed}
+            input.CodeSubmitButton(type="submit", value="הגש")
+
+
+
+          
+     
+
+
+
+
+
+
+
+
+
