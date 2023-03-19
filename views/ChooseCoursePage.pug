@@ -10,50 +10,54 @@ html(lang="en", dir="rtl")
     #ChooseCourseContainer
         header#myHeader
             p
+            
+        
         h1#mainTitle בחר קורס
         
         h2#title קורסי מחלקת הנדסת תעשייה וניהול
-        .flex-container1
-            .flex-container1-2
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value="Web")
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value="BI")
-            .flex-container3-4
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value="אוטומציה")
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value="סימולציה")
-        .flex-container2
-            .flex-container5-6
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value="רגרסיה")
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value='תפ"י 1')
-            .flex-container7-8
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value='תפ"י 2')
-                .flex-child
-                    a(href="/ReviewPage")
-                        input.course(type="submit", value='ניתו"צ')
-        .differentCourse 
-            p#CourseText לבחירת קורס שאינו מופיע מעלה:
-            br
-            label.CourseName(for="CourseName") מלא את שם הקורס: 
-            input#CourseNameInput.CourseName(type="text")
+        .Message #{InvalidCourse}
+        
+        form(action='/newCourse' method="POST")
+            .flex-container1
+                .flex-container1-2
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value="Web")
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value="BI")
+                .flex-container3-4
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value="אוטומציה")
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit",name = "courseName" , value="סימולציה")
+            .flex-container2
+                .flex-container5-6
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit",name = "courseName" , value="רגרסיה")
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value='תפ"י 1')
+                .flex-container7-8
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value='תפ"י 2')
+                    .flex-child
+                        a(href="/ReviewPage")
+                            input.course(type="submit", name = "courseName" ,value='ניתו"צ')
+            .differentCourse 
+                p#CourseText לבחירת קורס שאינו מופיע מעלה:
+                br
+                label.CourseName(for="CourseName") מלא את שם הקורס: 
+                input#CourseNameInput.CourseName(type="text", name = "courseName")
 
-            #toReviewPage
-                a(href='/ReviewPage')
-                    button#submitCourseName(style='display: none;') בחר  
-
-      
+                #toReviewPage
+                    a(href='/ReviewPage')
+                        button#submitCourseName(style='display: none;') בחר  
+        
 
         br
         br

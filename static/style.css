@@ -125,6 +125,22 @@
 
 
 /*Choose Course*/
+
+/*
+.isDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+a[aria-disabled="true"] {
+color: currentColor;
+display: inline-block;  
+pointer-events: none;
+text-decoration: none;
+}
+
+*/
+
 #ChooseCourseContainer{
     text-align: center;
 }
@@ -185,6 +201,7 @@
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-weight: bold;
     color:black;
+    cursor:pointer;
 }
 
 .course:hover{

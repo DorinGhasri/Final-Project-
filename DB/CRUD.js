@@ -40,7 +40,7 @@ const createNewReview = function(req,res){
             console.log("עכשיו בדיקה");
             console.log(req.body.button1);
             if (req.body.button1 === "OneMoreReviewBut") {
-                res.render("ReviewPage");
+                res.render("ChooseCoursePage");
             }else {
                 res.render("GoodbyePage");
             }
@@ -51,4 +51,64 @@ const createNewReview = function(req,res){
 };
 
 
-module.exports = {createNewReview};
+
+// Create a new Course
+const createNewCourse = function(req,res){
+    if (!req.body) {
+        res.status(400).send({message: "Content can not be empty!"});
+        return;
+    }
+    const newCourse = {
+        "code": req.cookies.code,
+        "course": req.body.courseName.length > 0 ? req.body.courseName : null ,
+    };
+    console.log(newCourse);
+
+
+    sql.query("SELECT code FROM Courses WHERE code LIKE ? AND course LIKE ?", [newCourse.code, newCourse.course], (err, results) => {
+        if (err){
+          console.log("error: ", err);
+          res.status(400).send({message: "error in code: " + err});
+          return;
+        }
+        console.log("עכשיו תוצאות")
+        console.log(results);
+    
+        if (results.length != 0){ //found the code in the reviews table - it already exists
+    
+          res.render('ChooseCoursePage', {InvalidCourse:"לא ניתן לתת ביקורת פעמיים על אותו הקורס, אנא בחר קורס אחר"})    
+    
+        }else{
+            sql.query("SELECT code FROM Courses WHERE code like ?" , newCourse.code , (err, results) => {
+                if (err){
+                    console.log("error: ", err);
+                    res.status(400).send({message: "error in creating course: " + err});
+                    return;
+                }
+                sql.query("INSERT INTO Courses SET ?", newCourse, (err, mysqlres) => {
+                    if (err) {
+                        console.log("error: ", err);
+                        res.status(400).send({message: "error in creating course: " + err});
+                        return;
+                    }
+                    
+                    if(req.cookies.Anon == 'true' && req.cookies){
+                        res.render("ReviewPage",{AnonMessage: "*ביקורות האתר הינן אנונימיות"});
+                      }else if(req.cookies.Anon =='false') {
+                        res.render("ReviewPage");
+                      }
+                });
+                
+            });
+        }
+    
+    });
+
+};
+
+
+
+
+
+
+module.exports = {createNewReview, createNewCourse};

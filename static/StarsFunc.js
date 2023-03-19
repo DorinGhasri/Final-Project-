@@ -26,6 +26,31 @@ input.addEventListener('input', function() {
 }
 
 
+/*
+const reviewLink = document.getElementById("review-link");
+reviewLink.addEventListener("click", () => {
+reviewLink.removeEventListener("click", arguments.callee);
+reviewLink.classList.add("disabled");
+});
+
+  function clickAndDisable(link) {
+    // disable subsequent clicks
+    link.onclick = function(event) {
+      event.preventDefault();
+      link.removeAttribute('onclick');
+    }
+  }
+
+  link.addEventListener('click', function (event) {
+    if (this.parentElement.classList.contains('isDisabled')) {
+      event.preventDefault();
+    }
+  });
+
+*/
+
+
+
 
 (function() {
     if (typeof document !== 'undefined') {

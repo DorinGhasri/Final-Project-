@@ -6,7 +6,8 @@ const csv=require('csvtojson');
 //create Reviews table
 const CreateReviewsTable = (req,res)=> {
     var Q0 = `CREATE TABLE IF NOT EXISTS Reviews (
-        code int NOT NULL PRIMARY KEY, 
+        Review_num int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        code int, 
         general int,
         difficulty int,
         organization int,
@@ -146,5 +147,59 @@ const ShowTeamsTable = (req,res)=>{
 
 
 
+//create Courses table
+const CreateCoursesTable = (req,res)=> {
+    var Q7 = `CREATE TABLE IF NOT EXISTS Courses (
+        Course_num int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        code int, 
+        course varchar(100)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;`;
+    SQL.query(Q7,(err,mySQLres)=>{
+        if (err) {
+            console.log("error ", err);
+            res.status(400).send({message: "error in creating Courses table"});
+            return;
+        }
+        console.log('created Courses table');
+        res.send("Courses table created");
+        return;
+    })      
+}
+
+
+
+//drop  Courses table 
+const DropCoursesTable = (req, res)=>{
+    var Q8 = "DROP TABLE Courses";
+    SQL.query(Q8, (err, mySQLres)=>{
+        if (err) {
+            console.log("error in droping Courses table ", err);
+            res.status(400).send({message: "error im dropping Courses table" + err});
+            return;
+        }
+        console.log("Courses table drpped");
+        res.send("Courses table drpped");
+        return;
+    })
+}
+
+
+
+//show Courses table
+const ShowCoursesTable = (req,res)=>{
+    var Q9 = "SELECT * FROM Courses";
+    SQL.query(Q9, (err, mySQLres)=>{
+        if (err) {
+            console.log("error in showing Courses table ", err);
+            res.send("error in showing Courses table ");
+            return;
+        }
+        console.log("showing Courses table");
+        res.send(mySQLres);
+        return;
+    })
+};
+
+
 module.exports = {CreateReviewsTable, DropReviewsTable, ShowReviewsTable, 
-    CreateTeamsTable,InsertDataToTeams, DropTeamsTable,ShowTeamsTable};
+    CreateTeamsTable,InsertDataToTeams, DropTeamsTable,ShowTeamsTable,CreateCoursesTable,DropCoursesTable,ShowCoursesTable };

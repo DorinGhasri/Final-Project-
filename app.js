@@ -65,7 +65,9 @@ app.listen(process.env.PORT || 3000, function(){
 
 //get and post
 app.post("/newReview", CRUD_operations.createNewReview);
+app.post("/newCourse", CRUD_operations.createNewCourse);
 app.get("/CodeValidation",JSValid.CodeValidation);
+
 
 
 
@@ -84,6 +86,7 @@ app.get('/deletecookie', (req, res) => {
 //create DB tables
 app.get('/CreateReviewsTable',CreateDB.CreateReviewsTable);
 app.get('/CreateTeamsTable',CreateDB.CreateTeamsTable);
+app.get('/CreateCoursesTable',CreateDB.CreateCoursesTable);
 
 //insert into DB tables
 app.get("/InsertDataToTeams", CreateDB.InsertDataToTeams);
@@ -91,8 +94,9 @@ app.get("/InsertDataToTeams", CreateDB.InsertDataToTeams);
 //show DB tables
 app.get('/ShowReviewsTable', CreateDB.ShowReviewsTable);
 app.get('/ShowTeamsTable', CreateDB.ShowTeamsTable);
+app.get('/ShowCoursesTable', CreateDB.ShowCoursesTable);
 
 //drop DB tables
 app.get('/DropReviewsTable', CreateDB.DropReviewsTable);
 app.get('/DropTeamsTable', CreateDB.DropTeamsTable);
-
+app.get('/DropCoursesTable', CreateDB.DropCoursesTable);
