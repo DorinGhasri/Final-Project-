@@ -531,9 +531,14 @@ h1.title-review{
 #myCheckbox{
     width: 4vw;
     height: 4vh;
+    margin-bottom: 0%;
 }
 
-#ConsentPageCenter,#myCheckboxLabel{
+#myCheckboxLabel{
+    margin-top: 0%;
+}
+
+#ConsentPagetext,#myCheckboxLabel,#ConsentClosePage{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: x-large;
     grid-area: 'ConsentPageCenter';
@@ -551,7 +556,7 @@ h1.title-review{
     text-decoration: none;
     background-color: black;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-size: xx-large;
+	font-size: 80%;
     grid-area: 'toHomePage';
 }
 
@@ -592,7 +597,16 @@ h1.title-review{
         font-weight:bold;
     }
 
-    .clickToVote{
+    #codeForm{
+        margin-top: 5%;
+    }
+
+    .codeLabel,#code{
+        font-size:200% ;
+    }
+
+
+    .CodeSubmitButton{
         font-size: 130%;
         cursor:pointer;
         margin-left: 20%;
@@ -640,6 +654,7 @@ h1.title-review{
         grid-area: 'GoodbyeCenter';
     }
 
+  
     
  /*Phone chooseCourse page*/
 	#ChooseCourseContainer {
@@ -663,6 +678,7 @@ h1.title-review{
         grid-area: 'differentCourse';
         margin-top: 3%;
         margin-right: 85%;
+        font-size: 100%;
     }
 
 	.flex-container1,
