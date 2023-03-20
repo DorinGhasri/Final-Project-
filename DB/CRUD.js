@@ -58,14 +58,15 @@ const createNewCourse = function(req,res){
         res.status(400).send({message: "Content can not be empty!"});
         return;
     }
+    
     const newCourse = {
         "code": req.cookies.code,
-        "course": req.body.courseName.length > 0 ? req.body.courseName : null ,
+        "course": req.body.courseName !== undefined ? req.body.courseName : req.body.courseNameText,
     };
     console.log(newCourse);
 
+    sql.query("SELECT code FROM Courses WHERE code LIKE ? AND course LIKE ?", [`%${newCourse.code}%`, `%${newCourse.course}%`], (err, results) => {
 
-    sql.query("SELECT code FROM Courses WHERE code LIKE ? AND course LIKE ?", [newCourse.code, newCourse.course], (err, results) => {
         if (err){
           console.log("error: ", err);
           res.status(400).send({message: "error in code: " + err});
