@@ -581,8 +581,8 @@ h1.title-review{
     }
     
     #sweetCamel{
-        width: 40vw;
-        height: 30vw;
+        width: 45vw;
+        height: 35vw;
         grid-area:'HomePageCenter';
     }
 
@@ -591,8 +591,15 @@ h1.title-review{
         grid-area:'HomePageCenter';
     }
 
+    #title{
+        font-size:300%;
+        grid-area:'HomePageCenter';
+        font-weight:bold;
+    }
+
+
     #text{
-        font-size:150%;
+        font-size:250%;
         grid-area:'HomePageCenter';
         font-weight:bold;
     }
@@ -607,10 +614,10 @@ h1.title-review{
 
 
     .CodeSubmitButton{
-        font-size: 130%;
+        font-size: 150%;
         cursor:pointer;
-        margin-left: 20%;
-        margin-right: 70%;
+        margin-left: 10%;
+        margin-right: 80%;
         font-style: normal;
         padding: 1%;
         padding-top: 1%;
@@ -678,7 +685,7 @@ h1.title-review{
         grid-area: 'differentCourse';
         margin-top: 3%;
         margin-right: 85%;
-        font-size: 100%;
+        font-size: 200%;
     }
 
 	.flex-container1,
