@@ -536,9 +536,13 @@ h1.title-review{
 
 #myCheckboxLabel{
     margin-top: 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: xx-large;
+    grid-area: 'ConsentPageCenter';
+    margin-right: 2%;
 }
 
-#ConsentPagetext,#myCheckboxLabel,#ConsentClosePage{
+#ConsentPagetext,#ConsentClosePage{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: x-large;
     grid-area: 'ConsentPageCenter';
@@ -556,7 +560,7 @@ h1.title-review{
     text-decoration: none;
     background-color: black;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-size: 80%;
+	font-size: 200%;
     grid-area: 'toHomePage';
 }
 
@@ -617,7 +621,7 @@ h1.title-review{
         font-size: 150%;
         cursor:pointer;
         margin-left: 10%;
-        margin-right: 80%;
+        margin-right: 85%;
         font-style: normal;
         padding: 1%;
         padding-top: 1%;
