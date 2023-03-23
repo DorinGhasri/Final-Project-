@@ -530,7 +530,7 @@ h1.title-review{
 
 @media screen and (max-width: 700px), screen and (max-device-width: 767px) and (orientation: portrait), screen and (max-device-width: 415px) and (orientation: landscape){
    
-/*Consent Page*/
+/*Phone Consent Page*/
 
 
 #ConsentPagecontainer {
@@ -545,6 +545,7 @@ h1.title-review{
     width: 4vw;
     height: 4vh;
     margin-bottom: 0%;
+    font-size: 200%;
 }
 
 #myCheckboxLabel{
@@ -902,11 +903,12 @@ h1.title-review{
     #starRating1,#starRating2,#starRating3,#starRating4,#starRating5,#starRating6{
         margin-right: 3%;
         grid-area: 'ReviewCenter';
+        width: 45%;
     }
     
     #StarCheckbox1,#StarCheckbox2,#StarCheckbox3,#StarCheckbox4,#StarCheckbox5,#StarCheckbox6{
-        width: 3vw;
-        height: 3vh;
+        width: 3.5vw;
+        height: 3.5vh;
         margin-right: 3%;
         grid-area: 'ReviewCenter';
     }
