@@ -903,7 +903,7 @@ h1.title-review{
     #starRating1,#starRating2,#starRating3,#starRating4,#starRating5,#starRating6{
         margin-right: 3%;
         grid-area: 'ReviewCenter';
-        width: 45%;
+        width: 50%;
     }
     
     #StarCheckbox1,#StarCheckbox2,#StarCheckbox3,#StarCheckbox4,#StarCheckbox5,#StarCheckbox6{
