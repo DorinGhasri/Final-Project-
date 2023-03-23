@@ -24,13 +24,13 @@
 #HomePageCenter{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-size: x-large;
+	font-size: 130%;
     grid-area: 'HomePageCenter';
 }
 
 #sweetCamel{
-	width: 20vw;
-	height: 17vw;
+	width: 19vw;
+	height: 15vw;
     grid-area: 'HomePageCenter';
 }
 
@@ -131,20 +131,7 @@
 
 /*Choose Course*/
 
-/*
-.isDisabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
 
-a[aria-disabled="true"] {
-color: currentColor;
-display: inline-block;  
-pointer-events: none;
-text-decoration: none;
-}
-
-*/
 
 #ChooseCourseContainer{
     text-align: center;
@@ -366,6 +353,30 @@ h2.title-Identification{
 
 /*ReviewPage*/
 
+
+#starRating1,#starRating2,#starRating3,#starRating4,#starRating5,#starRating6{
+    display: inline-block;
+    width: 40%;
+    grid-area:'ReviewCenter';
+}
+
+#StarCheckbox1,#StarCheckbox2,#StarCheckbox3,#StarCheckbox4,#StarCheckbox5,#StarCheckbox6{
+    width: 3vw;
+    height: 3vh;
+    margin-bottom: 0%;
+    display: inline-block;
+    grid-area:'ReviewCenter';
+}
+
+#StarCheckboxLabel1,#StarCheckboxLabel2,#StarCheckboxLabel3,#StarCheckboxLabel4,#StarCheckboxLabel5,#StarCheckboxLabel6{
+    margin-top: 0%;   
+    font-size:120%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    grid-area:'ReviewCenter';
+}
+
+
 .Message{
     font-size: 100%;
     font-weight: bold;
@@ -373,6 +384,7 @@ h2.title-Identification{
     color:rgba(253, 0, 0, 0.71);
     margin-right: 2.5%;
     margin-top: 1%;
+    grid-area:'ReviewCenter';
 }
  
 .informationSection{
@@ -480,6 +492,7 @@ h1.title-review{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     grid-area: 'ReviewCenter';
+   
 }
 
 
@@ -882,6 +895,26 @@ h1.title-review{
 
     .ratingLabels{
         font-size:100%;
+        grid-area: 'ReviewCenter';
+    }
+
+
+    #starRating1,#starRating2,#starRating3,#starRating4,#starRating5,#starRating6{
+        margin-right: 3%;
+        grid-area: 'ReviewCenter';
+    }
+    
+    #StarCheckbox1,#StarCheckbox2,#StarCheckbox3,#StarCheckbox4,#StarCheckbox5,#StarCheckbox6{
+        width: 3vw;
+        height: 3vh;
+        margin-right: 3%;
+        grid-area: 'ReviewCenter';
+    }
+    
+    #StarCheckboxLabel1,#StarCheckboxLabel2,#StarCheckboxLabel3,#StarCheckboxLabel4,#StarCheckboxLabel5,#StarCheckboxLabel6{
+        margin-top: 0%;
+        font-size:100%;
+        grid-area: 'ReviewCenter';
     }
 
 

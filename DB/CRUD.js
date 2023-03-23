@@ -36,14 +36,16 @@ const createNewReview = function(req,res){
                 res.status(400).send({message: "error in creating review: " + err});
                 return;
             }
-            console.log("new review added successfully");
-            console.log("עכשיו בדיקה");
-            console.log(req.body.button1);
-            if (req.body.button1 === "OneMoreReviewBut") {
+            if(results.length<2){
+                console.log("קטן מ-3");
                 res.render("ChooseCoursePage");
             }else {
+                console.log("גדול שווה ל-3");
                 res.render("GoodbyePage");
             }
+            console.log("new review added successfully");
+
+           // if (req.body.button1 === "OneMoreReviewBut") {
             return;
         });
         

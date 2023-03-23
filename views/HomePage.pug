@@ -16,16 +16,15 @@ html(dir="rtl", lang="en")
           br
           | לסטודנטים, מסטודנטים
         p#text גרסת בטא
-        br
+        
           
         img#sweetCamel(src="camel pic.png")
-        br
+        
 
       form#codeForm(action="/CodeValidation" method="GET")
             label.codeLabel(for="code") קוד כניסה:       
             input#code(type="text",name = 'code', required)
-            br
-            br
+         
             .errorMessage #{wrongDevice}
             .errorMessage #{InvalidCode}
             input.CodeSubmitButton(type="submit", value="הגש")

@@ -17,72 +17,101 @@ html(dir="rtl", lang="en")
           .Message #{AnonMessage}
           br
           form(action='/newReview' method="POST")
-            p.ratingLabels
-              | הערכה כללית:
-              i.my-star1.star1-1(data-star1="1")
-              i.my-star1.star1-2(data-star1="2")
-              i.my-star1.star1-3(data-star1="3")
-              i.my-star1.star1-4(data-star1="4")
-              i.my-star1.star1-5(data-star1="5")
-            input#output1(type="hidden", name = 'general', readonly)
+            div#starRating1
+              p#rating1.ratingLabels
+                | הערכה כללית:
+                i.my-star1.star1-1(data-star1="1")
+                i.my-star1.star1-2(data-star1="2")
+                i.my-star1.star1-3(data-star1="3")
+                i.my-star1.star1-4(data-star1="4")
+                i.my-star1.star1-5(data-star1="5")
+            input#output1(type="hidden", name = 'general', readonly,  reqiured )
             // rating is saved as number
-            p.ratingLabels
-              | רמת קושי:
-              i.my-star2.star2-1(data-star2="1")
-              i.my-star2.star2-2(data-star2="2")
-              i.my-star2.star2-3(data-star2="3")
-              i.my-star2.star2-4(data-star2="4")
-              i.my-star2.star2-5(data-star2="5")
-            input#output2(type="hidden",name = 'difficulty', readonly)
+            input#StarCheckbox1(type="checkbox")
+            label(for="StarCheckbox1" ,id ="StarCheckboxLabel1" ) מעדיף שלא לענות
+            br
+
+            div#starRating2
+              p#rating2.ratingLabels
+                | רמת קושי:
+                i.my-star2.star2-1(data-star2="1")
+                i.my-star2.star2-2(data-star2="2")
+                i.my-star2.star2-3(data-star2="3")
+                i.my-star2.star2-4(data-star2="4")
+                i.my-star2.star2-5(data-star2="5")
+            input#output2(type="hidden",name = 'difficulty' ,readonly)
             // rating is saved as number
-            p.ratingLabels
-              | רמת ארגון החומר:
-              i.my-star3.star3-1(data-star3="1")
-              i.my-star3.star3-2(data-star3="2")
-              i.my-star3.star3-3(data-star3="3")
-              i.my-star3.star3-4(data-star3="4")
-              i.my-star3.star3-5(data-star3="5")
+            input#StarCheckbox2(type="checkbox")
+            label(for="StarCheckbox2" ,id ="StarCheckboxLabel2" ) מעדיף שלא לענות
+            br
+
+            div#starRating3
+              p#rating3.ratingLabels
+                | רמת ארגון החומר:
+                i.my-star3.star3-1(data-star3="1")
+                i.my-star3.star3-2(data-star3="2")
+                i.my-star3.star3-3(data-star3="3")
+                i.my-star3.star3-4(data-star3="4")
+                i.my-star3.star3-5(data-star3="5")
             input#output3(type="hidden",name ='organization' , readonly)
             // rating is saved as number
-            p.ratingLabels
-              | מקצועיות המרצה:
-              i.my-star4.star4-1(data-star4="1")
-              i.my-star4.star4-2(data-star4="2")
-              i.my-star4.star4-3(data-star4="3")
-              i.my-star4.star4-4(data-star4="4")
-              i.my-star4.star4-5(data-star4="5")
+            input#StarCheckbox3(type="checkbox")
+            label(for="StarCheckbox3" ,id ="StarCheckboxLabel3" ) מעדיף שלא לענות
+            br
+            div#starRating4
+              p#rating4.ratingLabels
+                | מקצועיות המרצה:
+                i.my-star4.star4-1(data-star4="1")
+                i.my-star4.star4-2(data-star4="2")
+                i.my-star4.star4-3(data-star4="3")
+                i.my-star4.star4-4(data-star4="4")
+                i.my-star4.star4-5(data-star4="5")
             input#output4(type="hidden",name = 'professional',readonly)
             // rating is saved as number
-            p.ratingLabels
-              | באיזו מידה הקורס תרם לי:
-              i.my-star5.star5-1(data-star5="1")
-              i.my-star5.star5-2(data-star5="2")
-              i.my-star5.star5-3(data-star5="3")
-              i.my-star5.star5-4(data-star5="4")
-              i.my-star5.star5-5(data-star5="5")
+            input#StarCheckbox4(type="checkbox")
+            label(for="StarCheckbox4" ,id ="StarCheckboxLabel4" ) מעדיף שלא לענות
+            br
+
+            div#starRating5
+              p#rating5.ratingLabels
+                | באיזו מידה הקורס תרם לי:
+                i.my-star5.star5-1(data-star5="1")
+                i.my-star5.star5-2(data-star5="2")
+                i.my-star5.star5-3(data-star5="3")
+                i.my-star5.star5-4(data-star5="4")
+                i.my-star5.star5-5(data-star5="5")
             input#output5(type="hidden",name ='helped', readonly)
             // rating is saved as number
-            p.ratingLabels
-              | באיזו מידה הייתי ממליץ לחבר לקחת את הקורס:
-              i.my-star6.star6-1(data-star6="1")
-              i.my-star6.star6-2(data-star6="2")
-              i.my-star6.star6-3(data-star6="3")
-              i.my-star6.star6-4(data-star6="4")
-              i.my-star6.star6-5(data-star6="5")
+            input#StarCheckbox5(type="checkbox")
+            label(for="StarCheckbox5" ,id ="StarCheckboxLabel5" ) מעדיף שלא לענות
+            br
+            
+            div#starRating6
+              p#rating6.ratingLabels
+                | באיזו מידה הייתי ממליץ לחבר לקחת את הקורס:
+                i.my-star6.star6-1(data-star6="1")
+                i.my-star6.star6-2(data-star6="2")
+                i.my-star6.star6-3(data-star6="3")
+                i.my-star6.star6-4(data-star6="4")
+                i.my-star6.star6-5(data-star6="5")
             input#output6(type="hidden",name ='recommended', readonly)
             // rating is saved as number
+            input#StarCheckbox6(type="checkbox")
+            label(for="StarCheckbox6" ,id ="StarCheckboxLabel6" ) מעדיף שלא לענות
+            br
+            br
           
             h2#PresonalReview שתף את חוויתך האישית:
             label.label(for="review")
-            textarea#review(name="review", placeholder="פרט", maxlength="5000")
+            textarea#review(name="review", placeholder="פרט", minlength = "3",maxlength="5000" required)
             a(href="/GoodbyePage")
             br
             br
             br
             br
             br
-            button#submitButtonReview(type = "submit", name = "button1", value = 'finishReviewBut') הגש וסיים
-            a(href='/ChooseCoursePage')
+            button#submitButtonReview(type = "submit", name = "button1", value = 'finishReviewBut') הגש
+            //a(href='/ChooseCoursePage')
                 button#OneMoreReview(type = "submit", name = "button1", value = 'OneMoreReviewBut') הגש והשאר ביקורת נוספת
           
           div
